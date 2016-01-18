@@ -1,23 +1,49 @@
-<!--
-  Copyright 2013 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/fragment_background"
+    android:orientation="vertical"
+    android:weightSum="1" >
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+    <ListView
+        android:id="@+id/chat_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:divider="@android:color/transparent"
+        android:layout_weight="0.9" >
+    </ListView>
 
-      http://www.apache.org/licenses/LICENSE-2.0
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:background="@drawable/toolbar_selector"
+        android:orientation="horizontal"
+        android:weightSum="1" >
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  -->
+        <EditText
+            android:id="@+id/chatText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:text="Message"
+            android:textColor="@color/grey"
+            android:inputType="textMultiLine" />
+	
+        <ImageView
+            android:id="@+id/buttonSend"
+            android:src="@drawable/ic_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Send" />
+    </LinearLayout>
 
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/image"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000000"
-    android:gravity="center"
-    android:padding="32dp" />
+</LinearLayout>
