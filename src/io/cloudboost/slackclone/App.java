@@ -20,10 +20,10 @@ public class App extends Application {
 		initClient();
 	}
 	public void initClient(){
-		CloudApp.init("bengi", "ailFnQf+q102UpB86ZZBKg==");
+		CloudApp.init("xxxxx", "xxxxxxxx");
 	}
 	public void initMaster(){
-		CloudApp.init("bengi", "df6gNFKRDMXUXt+5EIWyIjaMPtQIZSEqiZxi8eAwYls=");
+		CloudApp.init("xxxx", "df6gNFKRDMXUXt+xxxxx=");
 	}
 
 }
